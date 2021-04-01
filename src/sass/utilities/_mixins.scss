@@ -1,0 +1,15 @@
+// Medium devices (tablets, 768px and up)
+$screen-md: 768px;
+@mixin media-md {
+	@media (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+$screen-xl: 1200px;
+@mixin media-xl {
+	@media (min-width: #{$screen-xl}) {
+		@content;
+	}
+}

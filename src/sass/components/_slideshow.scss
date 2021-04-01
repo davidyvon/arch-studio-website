@@ -1,0 +1,167 @@
+.slideshow {
+	position: relative;
+
+	height: 56rem;
+	margin-bottom: 10rem;
+
+	@include media-md {
+		height: 72rem;
+	}
+}
+
+.slide {
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	padding: 3.2rem;
+
+	@include media-md {
+		padding: 5.8rem;
+	}
+
+	@include media-xl {
+		padding: 19rem 0 19rem 19rem;
+	}
+
+	&.active {
+		z-index: 2;
+	}
+}
+
+.slide__content {
+	padding-bottom: 2rem;
+}
+
+.slide__heading {
+	font-size: 4.8rem;
+	font-weight: $bold;
+	line-height: 4.8rem;
+	letter-spacing: -0.2rem;
+	margin-bottom: 1.5rem;
+	color: $white;
+	width: 31rem;
+
+	@include media-md {
+		font-size: 8rem;
+		line-height: 8rem;
+		width: 55.4rem;
+	}
+}
+
+.slide__text {
+	font-size: 1.5rem;
+	font-weight: $medium;
+	line-height: 2.5rem;
+	width: 31rem;
+	margin-bottom: 4rem;
+	color: $white;
+
+	@include media-md {
+		width: 44.5rem;
+	}
+}
+
+.button--slide {
+	width: 25.2rem;
+}
+
+.slide__image {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	filter: brightness(60%);
+}
+
+.slide__image--1 {
+	background-image: url('/src/assets/static/content/home/mobile/image-hero-paramour.jpg');
+
+	@include media-md {
+		background-image: url('/src/assets/static/content/home/tablet/image-hero-paramour.jpg');
+	}
+
+	@include media-xl {
+		background-image: url('/src/assets/static/content/home/desktop/image-hero-paramour.jpg');
+	}
+}
+
+.slide__image--2 {
+	background-image: url('/src/assets/static/content/home/mobile/image-hero-seraph.jpg');
+
+	@include media-md {
+		background-image: url('/src/assets/static/content/home/tablet/image-hero-seraph.jpg');
+	}
+
+	@include media-xl {
+		background-image: url('/src/assets/static/content/home/desktop/image-hero-seraph.jpg');
+	}
+}
+
+.slide__image--3 {
+	background-image: url('/src/assets/static/content/home/mobile/image-hero-federal.jpg');
+
+	@include media-md {
+		background-image: url('/src/assets/static/content/home/tablet/image-hero-federal.jpg');
+	}
+
+	@include media-xl {
+		background-image: url('/src/assets/static/content/home/desktop/image-hero-federal.jpg');
+	}
+}
+
+.slide__image--4 {
+	background-image: url('/src/assets/static/content/home/mobile/image-hero-trinity.jpg');
+
+	@include media-md {
+		background-image: url('/src/assets/static/content/home/tablet/image-hero-trinity.jpg');
+	}
+
+	@include media-xl {
+		background-image: url('/src/assets/static/content/home/desktop/image-hero-trinity.jpg');
+	}
+}
+
+.control {
+	display: none;
+
+	@include media-xl {
+		z-index: 2;
+		position: absolute;
+		display: flex;
+		bottom: 0;
+		left: 0;
+		transform: translateX(-8rem);
+	}
+}
+
+.control__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 8rem;
+	height: 8rem;
+	font-size: 1.5rem;
+	font-weight: $bold;
+	border: none;
+	color: $medium_gray;
+	background-color: $white;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+
+	&.active {
+		background-color: $very_dark_blue;
+		color: $white;
+	}
+
+	&:hover {
+		background: $very_light_gray;
+	}
+}

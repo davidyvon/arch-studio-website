@@ -1,0 +1,13 @@
+.footer {
+	position: relative;
+
+	@include media-md {
+		height: 12rem;
+		width: calc(100% - 15.6rem);
+	}
+
+	@include media-xl {
+		height: 20rem;
+		width: calc(100% - 16.5rem);
+	}
+}

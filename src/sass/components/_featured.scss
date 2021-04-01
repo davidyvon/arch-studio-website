@@ -1,0 +1,178 @@
+.featured {
+	position: relative;
+}
+
+.featured__header {
+	margin-bottom: 6.4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.featured__heading {
+	font-size: 5.6rem;
+	line-height: 5.6rem;
+	font-weight: $bold;
+	color: $very_dark_blue;
+}
+
+.button--featured {
+	z-index: 10;
+	position: absolute;
+	bottom: -7.2rem;
+	left: 0;
+	right: 0;
+	width: 100%;
+
+	@include media-md {
+		position: relative;
+		bottom: 0;
+		width: 16.9rem;
+	}
+}
+
+.thumbnails {
+	display: flex;
+	flex-direction: column;
+
+	@include media-xl {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.thumbnail {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 24rem;
+	width: 100%;
+	padding: 0 0 2.4rem 2.4rem;
+	color: $white;
+	margin-bottom: 3rem;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+
+	@include media-md {
+		padding: 0 0 4rem 4rem;
+	}
+
+	@include media-xl {
+		height: 56rem;
+		width: 35rem;
+		margin-bottom: 0;
+
+		&:not(:last-child) {
+			margin-right: 3rem;
+		}
+	}
+
+	&:active,
+	&:hover {
+		background-color: $white;
+		opacity: 0.7;
+	}
+}
+
+.thumbnail__number {
+	display: none;
+
+	@include media-md {
+		display: block;
+		position: absolute;
+		top: 3.2rem;
+		right: 1.6rem;
+		font-size: 20rem;
+		font-weight: $bold;
+		opacity: 0.5;
+	}
+
+	@include media-xl {
+		right: -1.6rem;
+	}
+}
+
+.thumbnail__heading {
+	font-size: 1.8rem;
+	font-weight: $bold;
+	line-height: 2.5rem;
+	margin-bottom: 0.4rem;
+}
+
+.thumbnail__text {
+	font-size: 1.5rem;
+	font-weight: $medium;
+	line-height: 2.5rem;
+	opacity: 75%;
+}
+
+.thumbnail__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.thumbnail__image--1 {
+	background: url('/src/assets/static/content/portfolio/mobile/image-del-sol.jpg');
+
+	@include media-md {
+		background: url('/src/assets/static/content/portfolio/tablet/image-del-sol.jpg');
+	}
+
+	@include media-xl {
+		background: url('/src/assets/static/content/portfolio/desktop/image-del-sol.jpg');
+	}
+}
+
+.thumbnail__image--2 {
+	background: url('/src/assets/static/content/portfolio/mobile/image-228b.jpg');
+
+	@include media-md {
+		background: url('/src/assets/static/content/portfolio/tablet/image-228b.jpg');
+	}
+
+	@include media-xl {
+		background: url('/src/assets/static/content/portfolio/desktop/image-228b.jpg');
+	}
+}
+
+.thumbnail__image--3 {
+	background: url('/src/assets/static/content/portfolio/mobile/image-prototype.jpg');
+
+	@include media-md {
+		background: url('/src/assets/static/content/portfolio/tablet/image-prototype.jpg');
+	}
+
+	@include media-xl {
+		background: url('/src/assets/static/content/portfolio/desktop/image-prototype.jpg');
+	}
+}
+
+.thumbnail__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: -1;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+	}
+}

@@ -1,0 +1,168 @@
+.hero {
+	position: relative;
+	width: 100%;
+	height: 60.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	@include media-md {
+		height: 72rem;
+		flex-direction: row;
+		margin-bottom: 20rem;
+	}
+}
+
+.hero__heading {
+	display: none;
+
+	@include media-md {
+		display: flex;
+		position: absolute;
+		top: 19rem;
+		right: 0rem;
+		z-index: 1;
+		font-size: 12rem;
+		font-weight: $bold;
+		line-height: 20rem;
+		letter-spacing: -0.3rem;
+		color: $very_light_gray;
+	}
+
+	@include media-xl {
+		top: 12.4rem;
+		right: 1rem;
+		font-size: 20rem;
+		letter-spacing: -0.5rem;
+	}
+}
+
+.hero__content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background: $white;
+	padding: 3.2rem;
+	order: 1;
+
+	@include media-md {
+		position: absolute;
+		right: 0;
+		padding: 16rem 0 0 6rem;
+		width: 51.5rem;
+		height: 43.1rem;
+	}
+
+	@include media-xl {
+		width: 62.8rem;
+		height: 50.3rem;
+		padding: 16rem 0 0 18.2rem;
+	}
+
+	&:before {
+		display: none;
+
+		@include media-md {
+			content: '';
+			display: block;
+			position: relative;
+			top: -7.4rem;
+			left: 0;
+			width: 6.5rem;
+			height: 1px;
+			background: $light_gray;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: -4.5rem;
+		left: 0;
+		height: 4.5rem;
+		width: calc(100% - 3.2rem);
+		background: $white;
+
+		@include media-md {
+			display: none;
+		}
+	}
+}
+
+.hero__sub-heading {
+	font-size: 4rem;
+	font-weight: $bold;
+	line-height: 4.8rem;
+	letter-spacing: -0.14rem;
+	margin-bottom: 3.4rem;
+	width: 30rem;
+	color: $very_dark_blue;
+
+	@include media-md {
+		width: 40rem;
+		font-size: 5.6rem;
+		line-height: 5.6rem;
+		letter-spacing: -0.2rem;
+	}
+}
+
+.hero__text {
+	font-size: 1.5rem;
+	font-weight: $medium;
+	line-height: 2.5rem;
+	color: $dark_gray;
+}
+
+.hero__image {
+	position: relative;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 24rem;
+
+	@include media-md {
+		width: 57.3rem;
+		height: 72rem;
+	}
+
+	@include media-xl {
+		width: 63.5rem;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+	}
+}
+
+.hero__image--contact {
+	background-image: url('/src/assets/static/content/contact/mobile/image-hero.jpg');
+
+	@include media-md {
+		background-image: url('/src/assets/static/content/contact/tablet/image-hero.jpg');
+	}
+
+	@include media-xl {
+		background-image: url('/src/assets/static/content/contact/desktop/image-hero.jpg');
+	}
+}
+
+.hero__image--about {
+	background-image: url('/src/assets/static/content/about/mobile/image-hero.jpg');
+
+	@include media-md {
+		background-image: url('/src/assets/static/content/about/tablet/image-hero.jpg');
+	}
+
+	@include media-xl {
+		background-image: url('/src/assets/static/content/about/desktop/image-hero.jpg');
+	}
+}

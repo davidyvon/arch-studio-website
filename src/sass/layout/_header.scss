@@ -1,0 +1,57 @@
+.header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+	height: 9.6rem;
+	padding: 0 3.2rem;
+
+	@include media-md {
+		height: 15.2rem;
+		padding: 0;
+	}
+}
+
+.tag {
+	display: none;
+
+	@include media-md {
+		position: absolute;
+		top: 0rem;
+		left: -5rem;
+		display: flex;
+		align-items: center;
+		transform-origin: left;
+		transform: rotate(90deg) translateX(-1rem);
+	}
+
+	@include media-xl {
+		left: -7.6rem;
+	}
+}
+
+.tag__line {
+	width: 10.4rem;
+	height: 1px;
+	margin-right: 4.8rem;
+	background-color: $light_gray;
+}
+
+.tag__text {
+	font-size: 1.5rem;
+	font-weight: $medium;
+	letter-spacing: 1.5rem;
+	text-transform: uppercase;
+	color: $light_gray;
+}
+
+.logo {
+	@include media-md {
+		margin-right: 7.9rem;
+	}
+
+	@include media-xl {
+		margin-right: 9.5rem;
+	}
+}

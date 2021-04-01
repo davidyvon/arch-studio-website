@@ -1,0 +1,47 @@
+body {
+	height: auto;
+	width: 100%;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header {
+	@include media-md {
+		margin: 0 9.8rem;
+	}
+
+	@include media-xl {
+		margin: 0 16.5rem;
+	}
+}
+
+.main {
+	margin: 0 3.2rem 20rem 3.2rem;
+
+	@include media-md {
+		margin: 0 9.7rem 20rem 9.7rem;
+	}
+
+	@include media-xl {
+		margin: 0 16.5rem 20rem 16.5rem;
+	}
+}
+
+.main--footer {
+	margin: 0 0 20rem 0;
+
+	@include media-md {
+		margin: 0 9.7rem 20rem 9.7rem;
+	}
+
+	@include media-xl {
+		margin: 0 16.5rem 20rem 16.5rem;
+	}
+}
+
+.footer {
+	@include media-xl {
+		padding: 0 12.6rem 0 16.5rem;
+	}
+}
