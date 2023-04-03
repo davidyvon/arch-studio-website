@@ -2,11 +2,11 @@
 
 A 4 pages website for a fictional architecture agency
 
-[<img src="./src/assets/static/readme/preview.png">](https://davidyvon.github.io/arch-studio-website/)
+[<img src="./src/assets/static/readme/preview.png">](https://arch.davidyvon.com/)
 
 ## Hi ! 👋
 
-**Thanks for checking out this [project](https://davidyvon.github.io/arch-studio-website/) !**
+**Thanks for checking out this [project](https://arch.davidyvon.com/) !**
 
 ## General info
 
